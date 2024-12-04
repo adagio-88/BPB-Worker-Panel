@@ -15,9 +15,5 @@ export function initializeParams(request, env) {
     client = searchParams.get('app');
     urlOrigin = url.origin;
     dohURL = env.DOH_URL || 'https://cloudflare-dns.com/dns-query';
-    if (pathName !== '/secrets') {
-        if (typeof env.bpb !== 'object') throw new Error('KV Dataset is not properly set! Please refer to tutorials.', { cause: "init"});
-        if (!userID || !trojanPassword) throw new Error(`Please set UUID and Trojan password first. Please go to 🟢 https://${hostName}/secrets 🟢 to generate them.`, { cause: "init"});
-        if (userID && !isValidUUID(userID)) throw new Error(`Invalid UUID: ${c3d327fb-a255-46a8-bbe1-0828f287ede1}`, { cause: "init"});
     }
 }
